@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dxdy</title>
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/client.js"></script>
+    <script>
+        // Configure MathJax
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <style>
+        body {
+            background-color: #ffffff;
+        }
+        .btn-hover {
+            transition: all 0.2s ease;
+        }
+        .btn-hover:hover {
+            transform: translateY(-2px) scale(1.02);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Home View -->
+    <div id="home-view" class="container mx-auto px-4 py-8 md:py-12 max-w-6xl">
+        <!-- Tests by Category -->
+        <div class="space-y-8 md:space-y-12">
+            <!-- Join a Room Category (First) -->
+            <div>
+                <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6" style="color: #1098f7;">
+                    Join a Room
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                    <button 
+                        id="join-room-btn" 
+                        class="text-white font-semibold py-4 px-6 rounded-2xl transition duration-200 text-center min-h-[100px] flex items-center justify-center btn-hover"
+                        style="background-color: #1098f7;">
+                        <div>
+                            <i class="fas fa-door-open text-2xl mb-2"></i>
+                            <div class="text-lg md:text-xl font-bold">Join a Room</div>
+                            <div class="text-sm opacity-90 mt-2">Enter room code to join</div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Test Categories -->
+            <% sortedCategories.forEach((category, catIndex) => { %>
+                <div>
+                    <h2 class="text-2xl md:text-3xl font-bold mb-4 md:mb-6" style="color: #000000;">
+                        <%= category %>
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+                        <% testsByCategory[category].forEach((test, testIndex) => { %>
+                            <button 
+                                class="test-btn text-white font-semibold py-4 px-6 rounded-2xl transition duration-200 text-center min-h-[100px] flex items-center justify-center btn-hover"
+                                style="background-color: #000000;"
+                                data-test-id="<%= test.id %>"
+                                data-test-name="<%= test.name %>">
+                                <div>
+                                    <div class="text-lg md:text-xl font-bold mb-1"><%= test.name %></div>
+                                    <div class="text-sm opacity-90"><%= test.competition %> • <%= test.year %></div>
+                                    <div class="text-xs opacity-75 mt-1"><%= test.numberOfQuestions %> questions</div>
+                                </div>
+                            </button>
+                        <% }); %>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <!-- Loading/Status Messages -->
+        <div id="status-message" class="mt-8 text-center hidden">
+            <div class="inline-block bg-white rounded-lg shadow-lg p-4">
+                <p id="status-text" class="text-gray-700"></p>
+            </div>
+        </div>
+
+        <!-- Error Message -->
+        <div id="error-message" class="mt-4 text-center hidden">
+            <div class="inline-block bg-red-50 border border-red-200 rounded-lg p-4">
+                <p id="error-text" class="text-red-600"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Join Room Form View -->
+    <div id="join-form-view" class="container mx-auto px-4 py-8 max-w-md hidden">
+        <div class="bg-white rounded-lg shadow-lg p-8">
+            <h1 class="text-2xl font-bold text-center mb-6" style="color: #1098f7;">Join a Room</h1>
+            
+            <form id="join-form" class="space-y-4">
+                <div>
+                    <label for="room-code" class="block text-sm font-medium mb-2" style="color: #000000;">
+                        Room Code
+                    </label>
+                    <input type="text" id="room-code" name="roomCode" required 
+                           pattern="[0-9]{4}" maxlength="4" 
+                           placeholder="Enter 4-digit code"
+                           autocomplete="off"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-center text-2xl tracking-widest"
+                           style="color: #000000;">
+                </div>
+                
+                <div>
+                    <label for="team-name" class="block text-sm font-medium mb-2" style="color: #000000;">
+                        Team Name
+                    </label>
+                    <input type="text" id="team-name" name="teamName" required 
+                           maxlength="20"
+                           placeholder="Enter your team name"
+                           autocomplete="off"
+                           class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                           style="color: #000000;">
+                </div>
+                
+                <button type="submit" class="w-full text-white font-semibold py-3 px-6 rounded-2xl transition duration-200 btn-hover" style="background-color: #1098f7;">
+                    <i class="fas fa-sign-in-alt mr-2"></i>Join Room
+                </button>
+            </form>
+            
+            <div id="join-error-message" class="mt-4 text-red-600 text-sm hidden"></div>
+            
+            <button id="back-to-home-btn" class="w-full text-white font-semibold py-3 px-6 rounded-2xl transition duration-200 btn-hover mt-4" style="background-color: #000000;">
+                <i class="fas fa-home mr-2"></i>Back to Home
+            </button>
+        </div>
+    </div>
+
+    <!-- Room View (Host and Player) -->
+    <div id="room-view" class="container mx-auto px-4 py-8 max-w-4xl hidden">
+        <!-- Header -->
+        <div class="bg-white rounded-lg shadow-md p-4 mb-6">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold" style="color: #000000;">Room: <span id="room-code-header"></span></h1>
+                <div class="flex items-center gap-4">
+                    <div id="player-count" class="text-gray-600"></div>
+                    <div id="timer-display" class="hidden">
+                        <div id="digital-timer" class="digital-clock" style="background-color: #000000; color: #ffffff; padding: 8px 16px; border-radius: 8px; font-family: 'Courier New', monospace; font-size: 24px; font-weight: bold;">
+                            60
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Host View -->
+        <div id="host-view" class="hidden">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+                <h2 class="text-xl font-semibold mb-4" style="color: #000000;">Host Controls</h2>
+                <div id="host-controls" class="space-y-4">
+                    <button id="start-game-btn" class="w-full text-white font-semibold py-3 px-6 rounded-2xl transition duration-200 btn-hover" style="background-color: #1098f7;">
+                        <i class="fas fa-play mr-2"></i>Start Game
+                    </button>
+                </div>
+                <div id="game-controls" class="hidden space-y-4 mt-4">
+                    <div class="bg-gray-50 rounded-lg p-4">
+                        <p class="text-sm text-gray-600 mb-2">Question <span id="current-question-num">0</span> of <span id="total-questions">0</span></p>
+                        <p class="text-sm text-gray-600 mb-4">Answered: <span id="answered-count">0</span> / <span id="total-players-count">0</span></p>
+                        <button id="advance-question-btn" class="w-full text-white font-semibold py-2 px-4 rounded-2xl transition duration-200 mb-2 btn-hover" style="background-color: #1098f7;">
+                            <i class="fas fa-arrow-right mr-2"></i>Next Question
+                        </button>
+                        <button id="end-game-btn" class="w-full text-white font-semibold py-2 px-4 rounded-2xl transition duration-200 btn-hover" style="background-color: #000000;">
+                            <i class="fas fa-stop mr-2"></i>End Game
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="host-question-display" class="bg-gray-50 rounded-lg shadow-md p-6 hidden">
+                <h3 class="text-lg font-semibold mb-4 text-center" style="color: #000000;">Current Question</h3>
+                <div id="host-question-content" class="text-lg mb-4 text-center hover:underline" style="cursor: pointer;" title="Click to reveal answer"></div>
+            </div>
+            
+            <!-- Leaderboard -->
+            <div id="leaderboard" class="bg-gray-50 rounded-lg shadow-md p-6 hidden">
+                <h3 class="text-lg font-semibold mb-4" style="color: #000000;">Leaderboard</h3>
+                <div id="leaderboard-content">
+                    <!-- Leaderboard will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Player View -->
+        <div id="player-view" class="hidden">
+            <div id="waiting-screen" class="bg-white rounded-lg shadow-md p-8 text-center">
+                <h2 class="text-xl font-semibold mb-4" style="color: #000000;">Waiting for host to start the game...</h2>
+                <div class="animate-pulse text-gray-600">Please wait</div>
+            </div>
+
+            <div id="question-screen" class="hidden">
+                <div class="bg-white rounded-lg shadow-md p-6 mb-4">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-semibold" style="color: #000000;">Question <span id="player-question-num">0</span> of <span id="player-total-questions">0</span></h2>
+                        <div id="answer-status" class="text-sm font-semibold" style="color: #000000;">0/<span id="max-points">0</span> points</div>
+                    </div>
+                    <div id="question-content" class="text-lg mb-6"></div>
+                </div>
+
+                <div id="choices-container" class="space-y-3">
+                    <!-- Choices will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div id="game-ended-screen" class="hidden bg-white rounded-lg shadow-md p-8 text-center">
+                <h2 class="text-2xl font-semibold mb-4" style="color: #000000;">Game Ended</h2>
+                <div id="final-scores" class="text-gray-600"></div>
+            </div>
+        </div>
+
+        <!-- Error Display -->
+        <div id="error-display" class="hidden bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+            <p id="error-text" class="text-red-600"></p>
+        </div>
+    </div>
+
+    <!-- Answer Reveal Modal -->
+    <div id="answer-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl mx-4">
+            <h3 class="text-2xl font-bold mb-4" style="color: #000000;">Correct Answer</h3>
+            <div class="mb-4">
+                <p class="text-lg font-semibold mb-2" style="color: #000000;">Answer: <span id="modal-correct-answer" class="text-2xl" style="color: #1098f7;"></span></p>
+                <div id="modal-correct-choice" class="text-lg mb-4"></div>
+                <div id="modal-explanation" class="text-gray-700"></div>
+            </div>
+            <button id="close-modal-btn" class="w-full text-white font-semibold py-3 px-6 rounded-lg transition duration-200 btn-hover" style="background-color: #000000;">
+                Close
+            </button>
+        </div>
+    </div>
+</body>
+</html>

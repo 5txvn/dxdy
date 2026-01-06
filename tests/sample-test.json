@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "id": "calc-2024-001",
+    "name": "AP Calculus BC Practice Test",
+    "year": "2024",
+    "competition": "AP Calculus BC",
+    "difficulty": "Advanced",
+    "numberOfQuestions": 3,
+    "timePerQuestion": 120,
+    "category": "AP Tests"
+  },
+  "questions": [
+    {
+      "question": "Find the derivative of $f(x) = \\int_{0}^{x^2} \\sin(t^2) \\, dt$ with respect to $x$.",
+      "choices": {
+        "a": "$2x \\sin(x^4)$",
+        "b": "$\\sin(x^2)$",
+        "c": "$2x \\cos(x^4)$",
+        "d": "$\\cos(x^2)$",
+        "e": "$\\frac{\\sin(x^4)}{2x}$"
+      },
+      "answer": "a",
+      "explanation": "Using the Fundamental Theorem of Calculus and the chain rule, if $F(x) = \\int_{0}^{x^2} \\sin(t^2) \\, dt$, then $F'(x) = \\sin((x^2)^2) \\cdot 2x = 2x \\sin(x^4)$."
+    },
+    {
+      "question": "Evaluate $\\lim_{x \\to 0} \\frac{e^{3x} - 1}{\\sin(2x)}$.",
+      "choices": {
+        "a": "$0$",
+        "b": "$\\frac{1}{2}$",
+        "c": "$\\frac{3}{2}$",
+        "d": "$\\infty$",
+        "e": "The limit does not exist"
+      },
+      "answer": "c",
+      "explanation": "This is a $\\frac{0}{0}$ indeterminate form. Using L'Hôpital's Rule: $\\lim_{x \\to 0} \\frac{e^{3x} - 1}{\\sin(2x)} = \\lim_{x \\to 0} \\frac{3e^{3x}}{2\\cos(2x)} = \\frac{3}{2}$."
+    },
+    {
+      "question": "If $y = x^3 \\ln(x)$ for $x > 0$, find $\\frac{d^2y}{dx^2}$.",
+      "choices": {
+        "a": "$6x \\ln(x) + 5x$",
+        "b": "$6x \\ln(x) + 3x$",
+        "c": "$3x^2 \\ln(x) + x^2$",
+        "d": "$6x \\ln(x) + x$",
+        "e": "$3x^2 \\ln(x) + 2x^2$"
+      },
+      "answer": "a",
+      "explanation": "First derivative: $\\frac{dy}{dx} = 3x^2 \\ln(x) + x^3 \\cdot \\frac{1}{x} = 3x^2 \\ln(x) + x^2$. Second derivative: $\\frac{d^2y}{dx^2} = 6x \\ln(x) + 3x^2 \\cdot \\frac{1}{x} + 2x = 6x \\ln(x) + 3x + 2x = 6x \\ln(x) + 5x$."
+    }
+  ]
+}
