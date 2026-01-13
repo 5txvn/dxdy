@@ -288,7 +288,19 @@ function setupGameEvents() {
             
             // Display question for host
             $('#host-question-display').removeClass('hidden');
-            $('#host-question-content').html(question.question);
+            
+            // Display image if present
+            const hostQuestionContent = $('#host-question-content');
+            if (question.image) {
+                hostQuestionContent.html(`
+                    <div class="mb-4 text-center">
+                        <img src="${question.image}" alt="Question image" class="max-w-full h-auto mx-auto rounded-lg" style="max-width: 100%; max-height: 400px; object-fit: contain;">
+                    </div>
+                    <div>${question.question}</div>
+                `);
+            } else {
+                hostQuestionContent.html(question.question);
+            }
             renderMathJax('#host-question-content');
             
             // Hide player count, show timer in header (replacing player count)
@@ -318,7 +330,17 @@ function setupGameEvents() {
             updatePointsDisplay();
             
             // Display question
-            $('#question-content').html(question.question);
+            const questionContent = $('#question-content');
+            if (question.image) {
+                questionContent.html(`
+                    <div class="mb-4 text-center">
+                        <img src="${question.image}" alt="Question image" class="max-w-full h-auto mx-auto rounded-lg" style="max-width: 100%; max-height: 400px; object-fit: contain;">
+                    </div>
+                    <div>${question.question}</div>
+                `);
+            } else {
+                questionContent.html(question.question);
+            }
             renderMathJax('#question-content');
             
             // Display choices
