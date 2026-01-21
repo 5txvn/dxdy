@@ -1,0 +1,270 @@
+{
+    "metadata": {
+      "id": "practice-1-2018",
+      "name": "Calculus Bowl Practice Set 1 2018",
+      "year": "2018",
+      "competition": "Calculus Bowl",
+      "difficulty": "Normal",
+      "numberOfQuestions": 24,
+      "category": "Practice"
+    },
+    "questions": [
+        {
+            "question": "$\\frac{d}{dx}[\\cot(x)] =$",
+            "choices": {
+              "a": "$-\\cos(x)$",
+              "b": "$-\\csc^2(x)$",
+              "c": "$\\sec^2(x)$",
+              "d": "$-\\csc(x)\\cot(x)$"
+            },
+            "answer": "b"
+          },
+          {
+            "question": "$\\frac{d}{dx}[\\sqrt{x}] =$",
+            "choices": {
+              "a": "$\\frac{1}{2\\sqrt{x}}$",
+              "b": "$\\frac{1}{\\sqrt{x}}$",
+              "c": "$2\\sqrt[3]{x}$",
+              "d": "$\\frac{2}{\\sqrt{x}}$"
+            },
+            "answer": "a"
+          },
+          {
+            "question": "$\\frac{d}{dx}[\\arctan x] =$",
+            "choices": {
+              "a": "$\\frac{1}{\\sqrt{1-x^2}}$",
+              "b": "$\\sec(x)\\tan(x)$",
+              "c": "$\\frac{1}{1+x^2}$",
+              "d": "$\\sec^2(x)$"
+            },
+            "answer": "c"
+          },
+          {
+            "question": "$\\lim_{n \\to \\infty} \\frac{4n^2 - 3n + 1}{2n^2 + 6n - 7} =$",
+            "choices": {
+              "a": "1/2",
+              "b": "1",
+              "c": "2",
+              "d": "4"
+            },
+            "answer": "c"
+          },
+          {
+            "question": "$e^x =$",
+            "choices": {
+              "a": "$1 + x + \\frac{x^2}{2!} + \\frac{x^3}{3!} + \\dots$",
+              "b": "$1 - x + \\frac{x^2}{2!} - \\frac{x^3}{3!} + \\dots$",
+              "c": "$1 - \\frac{x^2}{2!} + \\frac{x^4}{4!} - \\frac{x^6}{6!} + \\dots$",
+              "d": "$x - \\frac{x^3}{3!} + \\frac{x^5}{5!} - \\frac{x^7}{7!} + \\dots$"
+            },
+            "answer": "a"
+          },
+          {
+            "question": "Find the slope of the line tangent to the graph of $y = x^3 - 4x + 3$ at the point $x = 2$.",
+            "choices": {
+              "a": "-8",
+              "b": "0",
+              "c": "8",
+              "d": "12"
+            },
+            "answer": "c"
+          },
+          {
+            "question": "How many points of inflection does the graph $y = x^2 + 2x + 1$ have?",
+            "choices": {
+              "a": "0",
+              "b": "1",
+              "c": "2",
+              "d": "3"
+            },
+            "answer": "a"
+          },
+          {
+            "question": "Assume that the polynomial $f(x)$ has exactly two local maxima and one local minimum, and that these are the only critical points of $f(x)$. Then the largest number of $x$-intercepts the graph of $f(x)$ could have is",
+            "choices": {
+              "a": "8",
+              "b": "6",
+              "c": "4",
+              "d": "2",
+              "e": "0"
+            },
+            "answer": "b"
+          },
+          {
+            "question": "If $f'(a) = 0$ at a certain point $a$, which statement concerning $a$ is correct?",
+            "choices": {
+              "a": "$f(a)$ is a local maximum.",
+              "b": "$f(a)$ is a local minimum.",
+              "c": "$f(a)$ is a point of inflection.",
+              "d": "$f(a)$ is a point at which the tangent line is parallel to the $y$-axis.",
+              "e": "$f(a)$ is a point at which the tangent line is parallel to the $x$-axis."
+            },
+            "answer": "e"
+          },
+          {
+            "question": "After investing $1000 at the annual interest rate of 7% compounded continuously, your balance $B$ is measured in dollars and defined by $B = f(t)$. The most appropriate interpretation of the expression $f^{-1}(3000)$ is",
+            "choices": {
+              "a": "your balance in dollars after 3000 months.",
+              "b": "your balance in dollars after 3000 years.",
+              "c": "the number of years required to gain $3000 in interest.",
+              "d": "the number of years required to gain $2000 in interest.",
+              "e": "the interest earned on a $3000 deposit in $t$ years."
+            },
+            "answer": "d"
+          },
+          {
+            "question": "If $f(x) = \\frac{\\sqrt{2x+5} - \\sqrt{x+7}}{x-2}$ for $x \\neq 2$, and if $f$ is continuous at $x = 2$, then $k =$",
+            "choices": {
+              "a": "0",
+              "b": "$\\frac{1}{6}$",
+              "c": "$\\frac{1}{3}$",
+              "d": "1",
+              "e": "$\\frac{7}{5}$"
+            },
+            "answer": "b"
+          },
+          {
+            "question": "What is $\\lim_{n \\to \\infty} \\frac{8(\\frac{1}{2} + n)^8 - 8(\\frac{1}{2})^8}{n}$?",
+            "choices": {
+              "a": "0",
+              "b": "$\\frac{1}{2}$",
+              "c": "1",
+              "d": "The limit does not exist.",
+              "e": "It cannot be determined from the information given."
+            },
+            "answer": "b"
+          },
+          {
+            "question": "For what value of $k$ will $x + \\frac{k}{x}$ have a relative maximum at $x = -2$?",
+            "choices": {
+              "a": "$-4$",
+              "b": "$-2$",
+              "c": "2",
+              "d": "4",
+              "e": "None of these"
+            },
+            "answer": "d"
+          },
+          {
+            "question": "When the area in square units of an expanding circle is increasing twice as fast as its radius in linear units, the radius is",
+            "choices": {
+              "a": "$\\frac{1}{4\\pi}$",
+              "b": "$\\frac{1}{4}$",
+              "c": "$\\frac{1}{\\pi}$",
+              "d": "1",
+              "e": "$\\pi$"
+            },
+            "answer": "c"
+          },
+          {
+            "question": "The region bounded by the $x$-axis and the part of the graph of $y = \\cos x$ between $x = -\\frac{\\pi}{2}$ and $x = \\frac{\\pi}{2}$ is separated into two regions by the line $x = k$. If the area of the region for $-\\frac{\\pi}{2} \\leq x \\leq k$ is three times the area of the region for $k \\leq x \\leq \\frac{\\pi}{2}$, then $k =$",
+            "choices": {
+              "a": "$\\arcsin(\\frac{1}{4})$",
+              "b": "$\\arcsin(\\frac{1}{3})$",
+              "c": "$\\frac{\\pi}{6}$",
+              "d": "$\\frac{\\pi}{4}$",
+              "e": "$\\frac{\\pi}{3}$"
+            },
+            "answer": "b"
+          },
+          {
+            "question": "If $f'(x)$ and $g'(x)$ exist and $f'(x) > g'(x)$ for all real $x$, then the graph of $y = f(x)$ and the graph of $y = g(x)$",
+            "choices": {
+              "a": "intersect exactly once.",
+              "b": "intersect no more than once.",
+              "c": "do not intersect.",
+              "d": "could intersect more than once.",
+              "e": "have a common tangent at each point of intersection."
+            },
+            "answer": "b"
+          },
+          {
+            "question": "A point moves on the $x$-axis in such a way that its velocity at time $t$ $(t > 0)$ is given by $v = \\frac{\\ln t}{t}$. At what value of $t$ does $v$ attain its maximum?",
+            "choices": {
+              "a": "1",
+              "b": "$e^{\\frac{1}{2}}$",
+              "c": "$e$",
+              "d": "$e^{\\frac{3}{2}}$",
+              "e": "There is no maximum value for $v$."
+            },
+            "answer": "c"
+          },
+          {
+            "question": "At $x = 0$, which of the following is true of the function $f$ defined by $f(x) = x^2 + e^{-2x}$?",
+            "choices": {
+              "a": "$f$ is increasing.",
+              "b": "$f$ is decreasing.",
+              "c": "$f$ is discontinuous.",
+              "d": "$f$ has a relative minimum.",
+              "e": "$f$ has a relative maximum."
+            },
+            "answer": "b"
+          },
+          {
+            "question": "The area of the region bounded by the curve $y = e^{2x}$, the $x$-axis, the $y$-axis, and the line $x = 2$ is equal to",
+            "choices": {
+              "a": "$\\frac{e^4}{2} - e$",
+              "b": "$\\frac{e^4}{2} - 1$",
+              "c": "$\\frac{e^4}{2} - \\frac{1}{2}$",
+              "d": "$2e^4 - e$",
+              "e": "$2e^4 - 2$"
+            },
+            "answer": "c"
+          },
+          {
+            "question": "A region in the plane is bounded by the graph of $y = \\frac{1}{x}$, the $x$-axis, the line $x = m$, and the line $x = 2m$, $m > 0$. The area of this region",
+            "choices": {
+              "a": "is independent of $m$.",
+              "b": "increases as $m$ increases.",
+              "c": "decreases as $m$ increases.",
+              "d": "decreases as $m$ increases when $m < \\frac{1}{2}$; increases as $m$ increases when $m > \\frac{1}{2}$.",
+              "e": "increases as $m$ increases when $m < \\frac{1}{2}$; decreases as $m$ increases when $m > \\frac{1}{2}$."
+            },
+            "answer": "a"
+          },
+          {
+            "question": "If a function $f$ is continuous for all $x$ and if $f$ has a relative maximum at $(-1, 4)$ and a relative minimum at $(3, -2)$, which of the following statements must be true?",
+            "choices": {
+              "a": "The graph of $f$ has a point of inflection somewhere between $x = -1$ and $x = 3$.",
+              "b": "$f'(-1) = 0$",
+              "c": "The graph of $f$ has a horizontal asymptote.",
+              "d": "The graph of $f$ has a horizontal tangent line at $x = 3$.",
+              "e": "The graph of $f$ intersects both axes."
+            },
+            "answer": "e"
+          },
+          {
+            "question": "If $a, b, c, d$, and $e$ are real numbers and $a \\neq 0$, then the polynomial equation $ax^9 + bx^5 + cx^3 + dx + e = 0$ has",
+            "choices": {
+              "a": "only one real root.",
+              "b": "at least one real root.",
+              "c": "an odd number of nonreal roots.",
+              "d": "no real roots.",
+              "e": "no positive real roots."
+            },
+            "answer": "b"
+          },
+          {
+            "question": "If $y = \\tan u$, $u = v - \\frac{1}{v}$, and $v = \\ln x$, what is the value of $\\frac{dy}{dx}$ at $x = e$?",
+            "choices": {
+              "a": "0",
+              "b": "$\\frac{1}{e}$",
+              "c": "1",
+              "d": "$\\frac{2}{e}$",
+              "e": "$\\sec^2 e$"
+            },
+            "answer": "d"
+          },
+          {
+            "question": "If $f(x) = \\begin{cases} 8 - x^2 & \\text{for } -2 \\leq x \\leq 2 \\\\ x^2 & \\text{elsewhere} \\end{cases}$, then $\\int_{-3}^{3} f(x) \\, dx$ is a number between",
+            "choices": {
+              "a": "0 and 8",
+              "b": "8 and 16",
+              "c": "16 and 24",
+              "d": "24 and 32",
+              "e": "32 and 40"
+            },
+            "answer": "d"
+          }
+    ]
+  }
