@@ -1,0 +1,309 @@
+{
+  "metadata": {
+    "id": "practice-4-2018",
+    "name": "Calculus Bowl Practice Set 4",
+    "year": "2018",
+    "competition": "Calculus Bowl",
+    "difficulty": "Normal",
+    "numberOfQuestions": 27,
+    "category": "Practice"
+  },
+  "questions": [
+    {
+      "question": "$\\lim_{x \\to 1} \\frac{x^2 - 1}{\\sin(\\pi x)}$ is",
+      "choices": {
+        "a": "$-2$",
+        "b": "$-\\frac{2}{\\pi}$",
+        "c": "0",
+        "d": "$\\frac{2}{\\pi}$",
+        "e": "nonexistent"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "If $y = \\left( \\frac{x}{x+1} \\right)^5$, then $\\frac{dy}{dx} =$",
+      "choices": {
+        "a": "$5(1+x)^4$",
+        "b": "$\\frac{x^4}{(x+1)^4}$",
+        "c": "$\\frac{5x^4}{(x+1)^4}$",
+        "d": "$\\frac{5x^4}{(x+1)^6}$",
+        "e": "$\\frac{5x^4(2x+1)}{(x+1)^6}$"
+      },
+      "answer": "d"
+    },
+    {
+      "question": "Let $y = f(x)$ be the solution to the differential equation $\\frac{dy}{dx} = f'(x)$ with initial condition $f(2) = 3$. Selected values of $f'$ are $(2, -0.5), (2.2, -0.3), (2.4, -0.1)$. What is the approximation for $f(2.4)$ if Euler's method is used, starting at $x = 2$ with two steps of equal size?",
+      "choices": {
+        "a": "2.80",
+        "b": "2.82",
+        "c": "2.84",
+        "d": "2.92",
+        "e": "3.16"
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Let $f$ be a function that is continuous on the closed interval $[1, 3]$ with $f(1) = 10$ and $f(3) = 18$. Which of the following statements must be true?",
+      "choices": {
+        "a": "$10 \\leq f(2) \\leq 18$",
+        "b": "$f$ is increasing on the interval $[1, 3]$.",
+        "c": "$f(x) = 17$ has at least one solution in the interval $[1, 3]$.",
+        "d": "$f'(x) = 8$ has at least one solution in the interval $(1, 3)$.",
+        "e": "$\\int_{1}^{3} f(x) \\, dx > 20$"
+      },
+      "answer": "c"
+    },
+    {
+      "question": "The position of a particle moving along the $x$-axis is given by a twice-differentiable function $x(t)$. If $x(2) < 0$, $x'(2) < 0$, and $x''(2) < 0$, which of the following statements must be true about the particle at time $t = 2$?",
+      "choices": {
+        "a": "The particle is moving toward the origin at a decreasing speed.",
+        "b": "The particle is moving toward the origin at an increasing speed.",
+        "c": "The particle is moving away from the origin at a decreasing speed.",
+        "d": "The particle is moving away from the origin at an increasing speed.",
+        "e": "The particle is moving away from the origin at a constant speed."
+      },
+      "answer": "d"
+    },
+    {
+      "question": "A particle moves in the $xy$-plane with position given by $(x(t), y(t)) = (5 - 2t, t^2 - 3)$ at time $t$. In which direction is the particle moving as it passes through the point $(3, -2)$?",
+      "choices": {
+        "a": "Up and to the left",
+        "b": "Down and to the left",
+        "c": "Up and to the right",
+        "d": "Down and to the right",
+        "e": "Straight up"
+      },
+      "answer": "a"
+    },
+    {
+      "question": "The sum of the series $1 + \\frac{2^1}{1!} + \\frac{2^2}{2!} + \\frac{2^3}{3!} + \\dots + \\frac{2^n}{n!} + \\dots$ is",
+      "choices": {
+        "a": "$\\ln 2$",
+        "b": "$e^2$",
+        "c": "$\\cos 2$",
+        "d": "$\\sin 2$",
+        "e": "nonexistent"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "What are the equations of the horizontal asymptotes of the graph of $y = \\frac{2x}{\\sqrt{x^2 - 1}}$?",
+      "choices": {
+        "a": "$y = 0$ only",
+        "b": "$y = 1$ only",
+        "c": "$y = 2$ only",
+        "d": "$y = -2$ and $y = 2$ only",
+        "e": "$y = -1$ and $y = 1$ only"
+      },
+      "answer": "d"
+    },
+    {
+      "question": "Let $g$ be the function defined by $g(x) = \\int_{-1}^{x} \\frac{t^3 - t^2 - 6t}{\\sqrt{t^2 + 7}} \\, dt$. On which of the following intervals is $g$ decreasing?",
+      "choices": {
+        "a": "$x \\leq -2$ and $0 \\leq x \\leq 3$",
+        "b": "$x \\leq -2$ and $x \\geq 3$",
+        "c": "$-2 \\leq x \\leq 0$ and $x \\geq 3$",
+        "d": "$-2 \\leq x \\leq 3$",
+        "e": "$x \\leq -1$"
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Let $g$ be a function such that $g(-1) = 0$ and $g(2) = 5$. Which of the following conditions guarantees that there is an $x$, $-1 < x < 2$, for which $g(x) = 3$?",
+      "choices": {
+        "a": "$g$ is defined for all $x$ in $(-1, 2)$.",
+        "b": "$g$ is continuous for all $x$ in $[-1, 2]$.",
+        "c": "$g$ is increasing on $[-1, 2]$.",
+        "d": "There exists an $x$ in $(-1, 2)$ such that $g'(x) = 5$.",
+        "e": "$\\int_{-1}^{2} g(x) \\, dx = 3$"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "Let $y = f(x)$ define a twice-differentiable function and let $y = t(x)$ be the line tangent to the graph of $f$ at $x = 2$. If $t(x) \\geq f(x)$ for all real $x$, which of the following must be true?",
+      "choices": {
+        "a": "$f(2) \\geq 0$",
+        "b": "$f'(2) \\geq 0$",
+        "c": "$f'(2) \\leq 0$",
+        "d": "$f''(2) \\geq 0$",
+        "e": "$f''(2) \\leq 0$"
+      },
+      "answer": "e"
+    },
+    {
+      "question": "The graph of the piecewise-defined function $f$ is shown in the figure above. The graph has a vertical tangent line at $x = -2$ and horizontal tangent lines at $x = -3$ and $x = -1$. What are all values of $x$, $-4 < x < 3$, at which $f$ is continuous but not differentiable?",
+      "image": "https://lh3.google.com/u/2/d/1105ihAxZ1cWIXlRa6OPrPTCQ9hcu0tnP=w1278-h1270-iv3",
+      "choices": {
+        "a": "$x = 1$",
+        "b": "$x = -2$ and $x = 0$",
+        "c": "$x = -2$ and $x = 1$",
+        "d": "$x = 0$ and $x = 1$"
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Let $f$ be the function defined by $f(x) = \\begin{cases} x^2 \\sin(\\pi x) & \\text{for } x < 2 \\\\ x^2 + cx - 18 & \\text{for } x \\geq 2 \\end{cases}$, where $c$ is a constant. For what value of $c$, if any, is $f$ continuous at $x = 2$?",
+      "choices": {
+        "a": "2",
+        "b": "7",
+        "c": "9",
+        "d": "$4\\pi - 4$",
+        "e": "There is no such value of $c$."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "If $f(x) = x^2 - 4$ and $g$ is a differentiable function of $x$, what is the derivative of $f(g(x))$?",
+      "choices": {
+        "a": "$2g(x)$",
+        "b": "$2g'(x)$",
+        "c": "$2xg'(x)$",
+        "d": "$2g(x)g'(x)$",
+        "e": "$2g(x) - 4$"
+      },
+      "answer": "d"
+    },
+    {
+      "question": "Let $f$ be the function defined by $f(x) = \\begin{cases} 3x - 2 & \\text{if } x < 1 \\\\ \\ln(3x - 2) & \\text{if } x \\geq 1 \\end{cases}$. Which of the following statements about $f$ are true?\nI. $\\lim_{x \\to 1^-} f(x) = \\lim_{x \\to 1^+} f(x)$\nII. $\\lim_{x \\to 1^-} f'(x) = \\lim_{x \\to 1^+} f'(x)$\nIII. $f$ is differentiable at $x = 1$.",
+      "choices": {
+        "a": "None",
+        "b": "I only",
+        "c": "II only",
+        "d": "II and III only",
+        "e": "I, II, and III"
+      },
+      "answer": "c"
+    },
+    {
+      "question": "The function $f$ is defined by $f(x) = 2x^3 - 4x^2 + 1$. The application of the Mean Value Theorem to $f$ on the interval $1 \\leq x \\leq 3$ guarantees the existence of a value $c$, where $1 < c < 3$, such that $f'(c) =$ ",
+      "choices": {
+        "a": "0",
+        "b": "9",
+        "c": "10",
+        "d": "14",
+        "e": "16"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "The velocity $v$, in meters per second, of a certain type of wave is given by $v(h) = 3\\sqrt{h}$, where $h$ is the depth, in meters, of the water through which the wave moves. What is the rate of change, in meters per second per meter, of the velocity of the wave with respect to the depth of the water, when the depth is 2 meters?",
+      "choices": {
+        "a": "$-\\frac{3}{4\\sqrt{2}}$",
+        "b": "$-\\frac{3}{8\\sqrt{2}}$",
+        "c": "$\\frac{3}{2\\sqrt{2}}$",
+        "d": "$\\frac{3}{\\sqrt{2}}$",
+        "e": "$4\\sqrt{2}$"
+      },
+      "answer": "c"
+    },
+    {
+      "question": "Which of the following is the solution to the differential equation $\\frac{dy}{dx} = 5y^2$ with the initial condition $y(0) = 3$?",
+      "choices": {
+        "a": "$y = \\sqrt{9e^{5x}}$",
+        "b": "$y = \\sqrt{\\frac{1}{9}e^{5x}}$",
+        "c": "$y = \\sqrt{e^{5x} + 9}$",
+        "d": "$y = \\frac{3}{1 - 15x}$",
+        "e": "$y = \\frac{3}{1 + 15x}$"
+      },
+      "answer": "d"
+    },
+    {
+      "question": "The top of a 15-foot-long ladder rests against a vertical wall with the bottom of the ladder on level ground. The ladder is sliding down the wall at a constant rate of 2 feet per second. At what rate, in radians per second, is the acute angle between the bottom of the ladder and the ground changing at the instant the bottom of the ladder is 9 feet from the base of the wall?",
+      "choices": {
+        "a": "$-\\frac{2}{9}$",
+        "b": "$-\\frac{1}{6}$",
+        "c": "$-\\frac{2}{25}$",
+        "d": "$\\frac{2}{25}$",
+        "e": "$\\frac{1}{9}$"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "The graph of $f'$, the derivative of $f$, is shown above. The line tangent to the graph of $f'$ at $x = 0$ is vertical, and $f'$ is not differentiable at $x = 2$. Which of the following statements is true?",
+      "image": "https://lh3.google.com/u/2/d/1SX-NM_iSk2yH7MosirOEP8p_w4-130hG=w1278-h1270-iv2",
+      "choices": {
+        "a": "$f'$ does not exist at $x = 2$.",
+        "b": "$f$ is decreasing on the interval $(2, 4)$.",
+        "c": "The graph of $f$ has a point of inflection at $x = 2$.",
+        "d": "The graph of $f$ has a point of inflection at $x = 0$.",
+        "e": "$f$ has a local maximum at $x = 0$."
+      },
+      "answer": "d"
+    },
+    {
+      "question": "The function $f$ is continuous on the closed interval $[1, 7]$. If $\\int_{1}^{7} f(x) \\, dx = 42$ and $\\int_{7}^{3} f(x) \\, dx = -32$, then $\\int_{1}^{3} 2f(x) \\, dx =$",
+      "choices": {
+        "a": "-148",
+        "b": "10",
+        "c": "12",
+        "d": "20",
+        "e": "148"
+      },
+      "answer": "d"
+    },
+    {
+      "question": "An ice sculpture in the form of a sphere melts in such a way that it maintains its spherical shape. The volume of the sphere is decreasing at a constant rate of $2\\pi$ cubic meters per hour. At what rate, in square meters per hour, is the surface area of the sphere decreasing at the moment when the radius is 5 meters? (Note: For a sphere of radius $r$, the surface area is $4\\pi r^2$ and the volume is $\\frac{4}{3}\\pi r^3$.)",
+      "choices": {
+        "a": "$\\frac{4\\pi}{5}$",
+        "b": "$40\\pi$",
+        "c": "$80\\pi^2$",
+        "d": "$100\\pi$"
+      },
+      "answer": "a"
+    },
+    {
+      "question": "Let $f$ be the piecewise-linear function defined by $f(x) = \\begin{cases} 2x - 2 & \\text{for } x < 3 \\\\ 2x - 4 & \\text{for } x \\geq 3 \\end{cases}$. Which of the following statements are true?\n\nI. $\\lim_{h \\to 0^-} \\frac{f(3+h)-f(3)}{h} = 2$\nII. $\\lim_{h \\to 0^+} \\frac{f(3+h)-f(3)}{h} = 2$\nIII. $f'(3) = 2$",
+      "choices": {
+        "a": "None",
+        "b": "II only",
+        "c": "I and II only",
+        "d": "I, II, and III"
+      },
+      "answer": "b"
+    },
+    {
+      "question": "The temperature of a room, in degrees Fahrenheit, is modeled by $H$, a differentiable function of the number of minutes after the thermostat is adjusted. Of the following, which is the best interpretation of $H'(5) = 2$?",
+      "choices": {
+        "a": "The temperature of the room is 2 degrees Fahrenheit, 5 minutes after the thermostat is adjusted.",
+        "b": "The temperature of the room increases by 2 degrees Fahrenheit during the first 5 minutes after the thermostat is adjusted.",
+        "c": "The temperature of the room is increasing at a constant rate of $\\frac{2}{5}$ degree Fahrenheit per minute.",
+        "d": "The temperature of the room is increasing at a rate of 2 degrees Fahrenheit per minute, 5 minutes after the thermostat is adjusted."
+      },
+      "answer": "d"
+    },
+    {
+      "question": "A rectangular area is to be enclosed by a wall on one side and fencing on the other three sides. If 18 meters of fencing are used, what is the maximum area that can be enclosed?",
+      "choices": {
+        "a": "$\\frac{9}{2} \\text{ m}^2$",
+        "b": "$\\frac{81}{4} \\text{ m}^2$",
+        "c": "$27 \\text{ m}^2$",
+        "d": "$40 \\text{ m}^2$",
+        "e": "$\\frac{81}{2} \\text{ m}^2$"
+      },
+      "answer": "e"
+    },
+    {
+      "question": "The figure above shows the graph of the differentiable function $f$ for $1 \\leq x \\leq 5$. Which of the following could be the $x$-coordinate of a point at which the line tangent to the graph of $f$ is parallel to the secant line through the points $(1, f(1))$ and $(5, f(5))$?",
+      "image": "https://lh3.google.com/u/2/d/1SZbU2uo6MFfB-1AVLukJ8jT83hsC11o5=w1278-h1270-iv1",
+      "choices": {
+        "a": "$r$",
+        "b": "$t$",
+        "c": "$u$",
+        "d": "$w$",
+        "e": "There is no such point."
+      },
+      "answer": "b"
+    },
+    {
+      "question": "The following data gives selected values of twice-differentiable functions $f$ and $g$: At $x = 2$: $f(x)=7$, $g(x)=2$, $g'(x)=1$, $g''(x)=5$. At $x = 4$: $f(x)=13$, $g(x)=9$, $g'(x)=7$, $g''(x)=8$. If $f'(x) = 3$ for all values of $x$, what is the value of $\\int_{2}^{4} f(x)g''(x) \\, dx$?",
+      "choices": {
+        "a": "63",
+        "b": "69",
+        "c": "78",
+        "d": "84",
+        "e": "103"
+      },
+      "answer": "b"
+    }
+  ]
+}
